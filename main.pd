@@ -1,0 +1,24 @@
+#N canvas 514 114 764 692 12;
+#X obj 79 206 euclid;
+#X obj 54 5 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 24 79 f;
+#X obj 59 88 % 16;
+#X obj 59 64 + 1;
+#X obj 125 240 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 113 160 5 0 0 2 offset - - 0;
+#X floatatom 210 123 5 0 0 2 length - - 0;
+#X obj 54 24 metro 1 120 permin;
+#X floatatom 71 160 5 0 0 2 hits - - 0;
+#X connect 0 0 5 0;
+#X connect 1 0 8 0;
+#X connect 2 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 6 0 0 2;
+#X connect 7 0 3 1;
+#X connect 7 0 0 3;
+#X connect 8 0 2 0;
+#X connect 9 0 0 1;
