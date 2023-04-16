@@ -1,18 +1,18 @@
 #N canvas 774 103 764 692 12;
-#X floatatom 19 8 5 20 320 0 - - - 0;
-#X floatatom 19 78 5 0 0 0 - - - 0;
-#X obj 19 46 expr (60/$f1)*1000;
-#X text 55 9 bpm;
-#X text 62 79 ms;
-#X obj -8 123 metro;
-#X obj -12 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X floatatom 16 107 5 20 320 0 - - - 0;
+#X floatatom 16 177 5 0 0 0 - - - 0;
+#X obj 16 145 expr (60/$f1)*1000;
+#X text 52 108 bpm;
+#X text 59 178 ms;
+#X obj -11 222 metro;
+#X obj -15 109 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X text -64 8 on/off;
-#X text 30 123 outputs bang every 'x' ms;
+#X text -67 107 on/off;
+#X text 27 222 outputs bang every 'x' ms;
 #X obj -333 189 f;
 #X obj -298 198 % 16;
 #X obj -298 174 + 1;
-#X obj 142 354 e2, f 12;
+#X obj 214 337 e2, f 12;
 #X obj 140 403 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 220 212 hradio 15 1 0 16 empty empty hits 0 -8 0 10 #fcfcfc
@@ -21,8 +21,13 @@
 #000000 #000000 0;
 #X obj 224 282 hradio 15 1 0 16 empty empty length 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 222 17 hradio 15 1 0 16 empty empty global\ length 0 -8 0 10
+#X obj 223 84 hradio 15 1 0 16 empty empty global\ length 0 -8 0 10
 #fcfcfc #000000 #000000 0;
+#X obj -14 29 hsl 128 15 20 320 1 1 empty empty bpm -2 -8 0 10 #fcfcfc
+#000000 #000000 7300 1;
+#X obj 22 65 int;
+#X obj 347 26 loadbang;
+#X msg 341 51 16;
 #X connect 0 0 2 0;
 #X connect 1 0 5 1;
 #X connect 2 0 1 0;
@@ -36,3 +41,8 @@
 #X connect 15 0 12 2;
 #X connect 16 0 12 3;
 #X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 0 0;
+#X connect 20 0 21 0;
+#X connect 21 0 17 0;
+#X connect 21 0 16 0;
