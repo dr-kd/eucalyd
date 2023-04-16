@@ -15,21 +15,21 @@ by the first three arguments respectively.;
 #X obj 34 368 < \$1;
 #X text 152 288 rhythm offset/rotation;
 #X floatatom 35 230 5 0 0 0 - - - 0;
-#X floatatom 94 265 5 0 0 0 - - - 0;
-#X floatatom 113 286 5 0 0 0 - - - 0;
-#X floatatom 172 316 5 0 0 0 - - - 0;
+#X floatatom 102 263 4 0 0 0 - - - 0;
+#X floatatom 373 146 4 0 0 0 - - - 0;
+#X floatatom 373 176 4 0 0 0 - - - 0;
 #X obj 69 148 f;
 #X obj 125 157 % 16;
 #X obj 125 133 + 1;
 #X obj 31 18 inlet;
 #X obj 34 429 outlet;
-#X obj 112 116 hradio 15 1 0 16 empty empty hits 0 -8 0 10 #fcfcfc
+#X obj 112 116 hradio 15 1 0 17 empty empty hits 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 112 146 hradio 15 1 0 16 empty empty offset 0 -8 0 10 #fcfcfc
+#X obj 112 146 hradio 15 1 0 17 empty empty offset 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 111 177 hradio 15 1 0 16 empty empty length 0 -8 0 10 #fcfcfc
+#X obj 111 177 hradio 15 1 0 17 empty empty length 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X floatatom 21 136 5 0 0 0 - - - 0;
+#X floatatom 371 116 4 0 0 0 - - - 0;
 #X floatatom 15 191 5 0 0 0 - - - 0;
 #X obj 76 16 inlet;
 #X connect 0 0 19 0;

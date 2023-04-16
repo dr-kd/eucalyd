@@ -1,0 +1,146 @@
+#N canvas 523 439 744 330 10;
+#X obj 26 17 cnv 15 350 200 empty empty empty 20 12 0 14 #b8b8b8 #404040
+0;
+#N canvas 0 135 733 689 kick 0;
+#X obj 220 366 osc~;
+#X obj 209 113 t b b;
+#X obj 220 336 line~;
+#X obj 209 169 del 50;
+#X obj 280 92 nbx 5 14 -1e+37 1e+37 0 1 empty kick_fall_time_1 empty
+0 -8 0 10 #fcfcfc #000000 #000000 28.5039 256;
+#X obj 274 43 nbx 5 14 -1e+37 1e+37 0 0 empty kick_break_pitch empty
+0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 320 146 nbx 5 14 -1e+37 1e+37 0 1 empty kick_max_pitch empty
+0 -8 0 10 #fcfcfc #000000 #000000 150.551 256;
+#X obj 259 248 pack;
+#X msg 259 273 \$1 \$2;
+#X text 267 24 break pitch;
+#X text 320 125 max pitch;
+#X msg 305 273 \$1 0;
+#X obj 305 248 pack;
+#X text 281 73 fall time 1;
+#X obj 119 48 nbx 5 14 -1e+37 1e+37 0 0 empty kick_fall_time_2 empty
+0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+#X text 111 25 fall time 2;
+#X msg 209 273 0 \$1;
+#X obj 209 248 pack;
+#X obj 209 70 bng 15 250 50 0 empty kick_bang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 112 267 0 0;
+#X obj 112 207 loadbang;
+#X obj 112 236 del 2;
+#X obj 209 222 f;
+#X obj 305 207 f;
+#X obj 259 182 f;
+#X obj 373 218 t b b;
+#X obj 306 439 *~;
+#X msg 418 313 1 2;
+#X obj 373 290 pack;
+#X obj 373 268 f;
+#X msg 373 313 0 \$1;
+#X obj 373 246 del 2;
+#X obj 388 164 nbx 5 14 50 8000 0 1 empty kick_amp_decay empty 0 -8
+0 10 #fcfcfc #000000 #000000 287.756 256;
+#X text 388 143 amp decay;
+#X obj 225 143 del 1;
+#X obj 451 220 t b b;
+#X obj 451 292 pack;
+#X obj 451 270 f;
+#X msg 451 315 0 \$1;
+#X obj 451 248 del 2;
+#X obj 373 395 expr~ $v1 > 0.5;
+#X obj 442 443 *~;
+#X obj 466 187 * 0.05;
+#X obj 496 291 pack;
+#X obj 496 269 f;
+#X obj 511 173 nbx 5 14 0 1 0 1 empty kick_transient empty 0 -8 0 10
+#fcfcfc #000000 #000000 0.148819 256;
+#X text 511 152 transient;
+#X msg 496 315 \$1 2;
+#X obj 411 420 lop~ 350;
+#X obj 451 366 line~;
+#X obj 373 364 line~;
+#X obj 332 404 *~;
+#X obj 334 508 outlet~;
+#X connect 0 0 40 0;
+#X connect 0 0 26 0;
+#X connect 1 0 3 0;
+#X connect 1 0 34 0;
+#X connect 1 1 23 0;
+#X connect 2 0 0 0;
+#X connect 3 0 22 0;
+#X connect 4 0 3 1;
+#X connect 4 0 7 1;
+#X connect 5 0 24 1;
+#X connect 6 0 23 1;
+#X connect 7 0 8 0;
+#X connect 8 0 2 0;
+#X connect 11 0 2 0;
+#X connect 12 0 11 0;
+#X connect 14 0 22 1;
+#X connect 16 0 2 0;
+#X connect 17 0 16 0;
+#X connect 18 0 1 0;
+#X connect 18 0 25 0;
+#X connect 18 0 35 0;
+#X connect 19 0 2 0;
+#X connect 20 0 21 0;
+#X connect 21 0 19 0;
+#X connect 22 0 17 0;
+#X connect 23 0 12 0;
+#X connect 24 0 7 0;
+#X connect 25 0 31 0;
+#X connect 25 1 27 0;
+#X connect 26 0 52 0;
+#X connect 27 0 50 0;
+#X connect 28 0 30 0;
+#X connect 29 0 28 0;
+#X connect 30 0 50 0;
+#X connect 31 0 29 0;
+#X connect 32 0 29 1;
+#X connect 32 0 42 0;
+#X connect 34 0 24 0;
+#X connect 35 0 39 0;
+#X connect 35 1 44 0;
+#X connect 36 0 38 0;
+#X connect 37 0 36 0;
+#X connect 38 0 49 0;
+#X connect 39 0 37 0;
+#X connect 40 0 48 0;
+#X connect 41 0 52 0;
+#X connect 42 0 37 1;
+#X connect 43 0 47 0;
+#X connect 44 0 43 0;
+#X connect 45 0 44 1;
+#X connect 47 0 49 0;
+#X connect 48 0 41 0;
+#X connect 49 0 41 1;
+#X connect 50 0 51 1;
+#X connect 50 0 51 0;
+#X connect 51 0 26 1;
+#X restore 336 112 pd kick;
+#X obj 329 22 bng 40 250 50 0 kick_bang empty KICK 7 22 0 12 #fc0400
+#000000 #000000;
+#X obj 154 30 vsl 15 128 2 200 0 1 kick_fall_time_1 empty empty 0 -9
+0 10 #fcfcfc #000000 #000000 1700 1;
+#X obj 205 48 vsl 15 128 35 150 0 1 kick_break_pitch empty empty 0
+-9 0 10 #fcfcfc #000000 #000000 3700 1;
+#X obj 250 32 vsl 15 128 5 3000 0 1 kick_fall_time_2 empty empty 0
+-9 0 10 #fcfcfc #000000 #000000 8300 1;
+#X obj 110 49 vsl 15 128 40 400 0 1 kick_max_pitch empty empty 0 -9
+0 10 #fcfcfc #000000 #000000 3900 1;
+#X text 90 181 Max Pitch;
+#X text 183 180 Break Pitch;
+#X text 228 164 Fall Time 2;
+#X text 129 162 Fall Time 1;
+#X obj 305 48 vsl 15 128 5 2000 0 1 kick_amp_decay empty empty 0 -9
+0 10 #fcfcfc #000000 #000000 1800 1;
+#X text 286 180 Amp Decay;
+#X obj 67 35 vsl 15 128 0 0.9 0 1 kick_transient empty empty 0 -9 0
+10 #fcfcfc #000000 #000000 2100 1;
+#X text 47 167 Transient;
+#X obj 644 13 inlet;
+#X obj 416 248 outlet~;
+#X connect 1 0 16 0;
+#X connect 15 0 2 0;
+#X coords -100 -1 1 1 370 220 1 10 10;
