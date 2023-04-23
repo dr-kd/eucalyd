@@ -2,6 +2,8 @@
 
 Written in Puredata.
 
+Brief demo [on youtube](https://www.youtube.com/watch?v=LjM8PYM-sn8)
+
 ## Credits
 
 Euclidean Sequencer code stolen from here:
@@ -17,5 +19,5 @@ The glue is all mine.
 
 Bug: Starting the metronome is unreliable.
 Todo: Swing clock
-Todo: Test deploy to ipad
+Bug: Deploy to ipad - currently not working.
 
