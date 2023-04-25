@@ -26,13 +26,13 @@ by the first three arguments respectively.;
 #000000 #000000 0;
 #X obj 112 146 hradio 15 1 0 17 \$0-offset empty offset 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X obj 111 177 hradio 15 1 0 17 \$0-length \$0-global-length length
-0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 115 177 hradio 15 1 1 17 \$0-length \$0-global-length length
+0 -8 0 10 #fcfcfc #000000 #000000 16;
 #X floatatom 373 116 4 0 0 0 - \$0-hits - 0;
 #X floatatom 38 251 5 0 0 0 - \$0-offset - 0;
 #X obj 99 309 r \$0-length;
 #X obj 60 75 r \$0-len;
-#X obj 24 13 inlet;
+#X obj 47 45 r \$1-hit;
 #X connect 0 0 18 0;
 #X connect 4 0 9 0;
 #X connect 7 0 8 0;
