@@ -2,7 +2,15 @@
 
 Written in Puredata.
 
-Brief demo [on youtube](https://www.youtube.com/watch?v=LjM8PYM-sn8)
+Brief demo [on youtube](https://youtu.be/LjM8PYM-sn8?t=18) here:
+
+[![demo](https://i.imgur.com/bqqtxVm.png)](https://youtu.be/LjM8PYM-sn8?t=18s "demo")
+
+## Usage
+
+Grab the source code.  Open the main.pd patch with puredata.  Turn dsp on, add some hits and otherwise fiddle, click the start button and you have a drum machine.
+
+Bugs:  Changing the divisions per beat selector requires you change the speed of the metronome
 
 ## Credits
 
