@@ -1,6 +1,6 @@
 # Eycalyd Euclidean Drum Machine
 
-Written in Puredata.
+Written in Puredata - download [here](https://puredata.info/downloads/pure-data)
 
 Brief demo [on youtube](https://youtu.be/LjM8PYM-sn8?t=18) here:
 
